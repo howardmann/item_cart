@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Item.destroy_all
+10.times { Item.create!(name: "Item", description: "I am a description.") }
+
+puts "Item count: #{Item.all.length}"
